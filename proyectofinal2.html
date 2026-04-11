@@ -8,27 +8,11 @@
 <title>Satillos International — Rosarios Bañados en Oro 24k</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --red: #D42B2B;
-    --yellow: #F5C518;
-    --navy: #1B2A4A;
-    --navy-dark: #111D33;
-    --navy-light: #243660;
-    --cream: #F5F0E8;
-    --text-muted: #8A9BBF;
-    --text-light: #C8D4E8;
-  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; background: #111D33 !important; }
   body { background: #111D33 !important; color: #C8D4E8; font-family: 'Tenor Sans', sans-serif; overflow-x: hidden; }
 
-nav {
-position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-display: flex; align-items: center; justify-content: space-between;
-padding: 12px 40px;
-background: rgba(17,29,51,0.97);
-border-bottom: 1px solid rgba(212,43,43,0.2);
-}
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 12px 40px; background: rgba(17,29,51,0.97); border-bottom: 1px solid rgba(212,43,43,0.2); }
 .nav-logo { display: flex; align-items: center; gap: 12px; }
 .nav-logo-img { width: 60px; height: 60px; object-fit: contain; }
 .nav-logo-name { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 600; letter-spacing: 0.1em; color: #F5F0E8; text-transform: uppercase; display: block; }
@@ -37,12 +21,7 @@ border-bottom: 1px solid rgba(212,43,43,0.2);
 .nav-links a { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #F5F0E8; text-decoration: none; transition: color 0.3s; }
 .nav-links a:hover { color: #F5C518; }
 
-.hero {
-min-height: 100vh;
-display: flex; flex-direction: column; align-items: center; justify-content: center;
-position: relative; overflow: hidden; padding: 120px 20px 100px;
-background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(212,43,43,0.12) 0%, transparent 65%), #111D33;
-}
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 120px 20px 100px; background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(212,43,43,0.12) 0%, transparent 65%), #111D33; }
 .hero-lines { position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(212,43,43,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(212,43,43,0.05) 1px, transparent 1px); background-size: 80px 80px; }
 .hero-content { text-align: center; position: relative; z-index: 2; max-width: 900px; }
 .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(212,43,43,0.15); border: 1px solid rgba(212,43,43,0.3); padding: 8px 20px; margin-bottom: 28px; font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: #F5C518; }
@@ -71,11 +50,9 @@ background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(212,43,43,0.12) 0%,
 
 .catalog { padding: 40px 16px 100px; }
 .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; width: 100%; }
-
 .product-card { background: #1B2A4A; overflow: hidden; transition: transform 0.3s; display: flex; flex-direction: column; }
 .product-card:hover { transform: translateY(-4px); }
 .product-card.hidden { display: none; }
-
 .card-img-wrap { position: relative; }
 .card-image { width: 100%; height: 220px; overflow: hidden; background: #243660; flex-shrink: 0; }
 .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
@@ -83,7 +60,6 @@ background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(212,43,43,0.12) 0%,
 .card-badge { position: absolute; top: 12px; left: 12px; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; background: #D42B2B; color: #F5F0E8; padding: 4px 10px; font-weight: bold; }
 .card-badge.gold { background: #F5C518; color: #111D33; }
 .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(17,29,51,0.7) 0%, transparent 50%); }
-
 .card-body { padding: 16px 20px 20px; flex: 1; display: flex; flex-direction: column; }
 .card-category { font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase; color: #D42B2B; margin-bottom: 6px; display: block; }
 .card-name { font-family: ‘Cormorant Garamond’, serif; font-size: 18px; font-weight: 400; color: #F5F0E8; line-height: 1.2; margin-bottom: 8px; }
@@ -97,24 +73,18 @@ background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(212,43,43,0.12) 0%,
 .featured-band p { font-family: ‘Cormorant Garamond’, serif; font-size: clamp(18px, 3vw, 30px); font-style: italic; font-weight: 300; color: #F5F0E8; max-width: 750px; margin: 0 auto; line-height: 1.6; }
 .featured-band cite { display: block; font-family: ‘Tenor Sans’, sans-serif; font-style: normal; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #F5C518; margin-top: 16px; }
 
-.contact-strip { padding: 80px 40px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(212,43,43,0.15); flex-wrap: wrap; gap: 40px; }
+.contact-strip { padding: 80px 40px; display: flex; align-items: flex-start; justify-content: space-between; border-top: 1px solid rgba(212,43,43,0.15); flex-wrap: wrap; gap: 40px; }
 .contact-strip h2 { font-family: ‘Cormorant Garamond’, serif; font-size: clamp(32px, 5vw, 52px); font-weight: 300; color: #F5F0E8; max-width: 500px; line-height: 1.2; }
 .contact-strip h2 em { font-style: italic; color: #F5C518; }
-.contact-info { display: flex; flex-direction: column; gap: 16px; }
-.social-links { display: flex; gap: 16px; margin-top: 8px; }
-.social-link {
-display: flex; align-items: center; justify-content: center;
-width: 44px; height: 44px;
-color: #F5F0E8; text-decoration: none;
-border: 1px solid rgba(245,197,24,0.3);
-border-radius: 50%;
-transition: all 0.3s;
-}
-.social-link:hover { border-color: #F5C518; color: #F5C518; background: rgba(245,197,24,0.1); }
-.contact-item-icon { width: 40px; height: 40px; border: 1px solid rgba(212,43,43,0.35); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-.contact-item-text { font-size: 14px; color: #ffffff !important; }
-.contact-item-text strong { display: block; color: #F5C518 !important; font-size: 13px; letter-spacing: 0.1em; }
-.contact-item-text a { color: #ffffff !important; text-decoration: none; }
+.contact-info { display: flex; flex-direction: column; gap: 20px; }
+.contact-item { display: flex; align-items: center; gap: 16px; }
+.contact-item-text { font-size: 14px; color: #ffffff; }
+.contact-item-text strong { display: block; color: #F5C518; font-size: 13px; letter-spacing: 0.1em; }
+.social-section { margin-top: 4px; }
+.social-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #F5C518; margin-bottom: 12px; display: block; }
+.social-links { display: flex; gap: 12px; }
+.social-link { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #F5F0E8; text-decoration: none; border: 1px solid rgba(245,197,24,0.3); border-radius: 50%; transition: all 0.3s; }
+.social-link:hover { border-color: #F5C518; color: #F5C518; }
 
 .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 500; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
 .wa-bubble { background: #25D366; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s; }
@@ -126,6 +96,9 @@ transition: all 0.3s;
 
 footer { background: #111D33; padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(212,43,43,0.12); flex-wrap: wrap; gap: 16px; }
 .footer-logo span { font-family: ‘Cormorant Garamond’, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.15em; color: #F5F0E8; text-transform: uppercase; }
+.footer-social { display: flex; gap: 16px; align-items: center; }
+.footer-social a { color: #8A9BBF; text-decoration: none; transition: color 0.3s; }
+.footer-social a:hover { color: #F5C518; }
 footer p { font-size: 11px; letter-spacing: 0.15em; color: #8A9BBF; }
 
 @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
@@ -201,282 +174,186 @@ footer { padding: 24px 16px; }
 
 <div class="catalog">
   <div class="catalog-grid">
-
-```
-<!-- ROSARIOS ORO -->
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/SD4TQMTQ/748633f6-0b92-4874-8f84-d9adb962283b-2.jpg" alt="Rosario Oro 1"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #1</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/SD4TQMTQ/748633f6-0b92-4874-8f84-d9adb962283b-2.jpg" alt="Rosario Oro 1"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #1</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/mrk7npJf/3e9e9a75-42a1-4dd2-8091-08581efc5b87.jpg" alt="Rosario Oro 2"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #2</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/mrk7npJf/3e9e9a75-42a1-4dd2-8091-08581efc5b87.jpg" alt="Rosario Oro 2"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #2</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/1YL9RLFw/7fc12c16-0640-42da-8457-ea137ee34623.jpg" alt="Rosario Oro 3"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #3</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/1YL9RLFw/7fc12c16-0640-42da-8457-ea137ee34623.jpg" alt="Rosario Oro 3"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #3</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/7dygTBvQ/4f4095ea-0d10-4074-a1e1-9db667e06909.jpg" alt="Rosario Oro 4"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #4</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/7dygTBvQ/4f4095ea-0d10-4074-a1e1-9db667e06909.jpg" alt="Rosario Oro 4"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #4</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/BVF8yXDh/04c3e672-ccef-4490-9d2b-99bc0038cf94.jpg" alt="Rosario Oro 5"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #5</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/BVF8yXDh/04c3e672-ccef-4490-9d2b-99bc0038cf94.jpg" alt="Rosario Oro 5"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #5</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/m3fbBW9/0161c52b-7840-4b8b-808f-364a62373a08.jpg" alt="Rosario Oro 6"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #6</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/m3fbBW9/0161c52b-7840-4b8b-808f-364a62373a08.jpg" alt="Rosario Oro 6"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #6</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/9H2TLtqC/cc41b3b6-2c88-41ca-8492-a1eaeb0c560b.jpg" alt="Rosario Oro 7"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #7</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/9H2TLtqC/cc41b3b6-2c88-41ca-8492-a1eaeb0c560b.jpg" alt="Rosario Oro 7"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #7</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="oro">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/8gXMXBpQ/84398b6a-466a-4f27-bbd3-051199105590-2.jpg" alt="Rosario Oro 8"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Oro</span>
-    <div class="card-name">Rosario Oro 24k #8</div>
-    <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$290.000</span>
-        <span class="card-price">$190.000</span>
+    <div class="product-card" data-category="oro">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/8gXMXBpQ/84398b6a-466a-4f27-bbd3-051199105590-2.jpg" alt="Rosario Oro 8"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Oro</span>
+        <div class="card-name">Rosario Oro 24k #8</div>
+        <p class="card-desc">Rosario bañado en oro 24k traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$290.000</span><span class="card-price">$190.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ROSARIOS PLATA -->
-<div class="product-card" data-category="plata">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/JFzPgXz3/9f9989b7-6c6f-43ac-b309-d48f8cf7e7b3-2.jpg" alt="Rosario Plata 1"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Plata</span>
-    <div class="card-name">Rosario Plata #1</div>
-    <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$280.000</span>
-        <span class="card-price">$180.000</span>
+    <div class="product-card" data-category="plata">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/JFzPgXz3/9f9989b7-6c6f-43ac-b309-d48f8cf7e7b3-2.jpg" alt="Rosario Plata 1"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Plata</span>
+        <div class="card-name">Rosario Plata #1</div>
+        <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$280.000</span><span class="card-price">$180.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="plata">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/G4wZgksz/d19bdf3e-5925-46de-8a78-b886efa18fc9.jpg" alt="Rosario Plata 2"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Plata</span>
-    <div class="card-name">Rosario Plata #2</div>
-    <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$280.000</span>
-        <span class="card-price">$180.000</span>
+    <div class="product-card" data-category="plata">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/G4wZgksz/d19bdf3e-5925-46de-8a78-b886efa18fc9.jpg" alt="Rosario Plata 2"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Plata</span>
+        <div class="card-name">Rosario Plata #2</div>
+        <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$280.000</span><span class="card-price">$180.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="plata">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/M52R5VMd/865b5a05-f567-4efd-963f-7620c7fbf677.jpg" alt="Rosario Plata 3"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Plata</span>
-    <div class="card-name">Rosario Plata #3</div>
-    <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$280.000</span>
-        <span class="card-price">$180.000</span>
+    <div class="product-card" data-category="plata">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/M52R5VMd/865b5a05-f567-4efd-963f-7620c7fbf677.jpg" alt="Rosario Plata 3"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Plata</span>
+        <div class="card-name">Rosario Plata #3</div>
+        <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$280.000</span><span class="card-price">$180.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="plata">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/HQGwRR7/d77f155d-2d14-4e2f-a914-9e5952d7e984.jpg" alt="Rosario Plata 4"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Rosario Plata</span>
-    <div class="card-name">Rosario Plata #4</div>
-    <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$280.000</span>
-        <span class="card-price">$180.000</span>
+    <div class="product-card" data-category="plata">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/HQGwRR7/d77f155d-2d14-4e2f-a914-9e5952d7e984.jpg" alt="Rosario Plata 4"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Rosario Plata</span>
+        <div class="card-name">Rosario Plata #4</div>
+        <p class="card-desc">Rosario en plata traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$280.000</span><span class="card-price">$180.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- DENARIOS -->
-<div class="product-card" data-category="denario">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/F4f4nyKp/9bff244b-1ab6-45f1-b85f-dae9ff129a87.jpg" alt="Denario 1"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Denario</span>
-    <div class="card-name">Denario #1</div>
-    <p class="card-desc">Denario traído de la Basílica de la Virgen de Guadalupe en México. Pieza de devoción y colección.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$150.000</span>
-        <span class="card-price">$80.000</span>
+    <div class="product-card" data-category="denario">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/F4f4nyKp/9bff244b-1ab6-45f1-b85f-dae9ff129a87.jpg" alt="Denario 1"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Denario</span>
+        <div class="card-name">Denario #1</div>
+        <p class="card-desc">Denario traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$150.000</span><span class="card-price">$80.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="denario">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/W4gGPZxY/8c279e10-47d3-47ff-abfd-69a7a6a41347.jpg" alt="Denario 2"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Denario</span>
-    <div class="card-name">Denario #2</div>
-    <p class="card-desc">Denario traído de la Basílica de la Virgen de Guadalupe en México. Pieza de devoción y colección.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$150.000</span>
-        <span class="card-price">$80.000</span>
+    <div class="product-card" data-category="denario">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/W4gGPZxY/8c279e10-47d3-47ff-abfd-69a7a6a41347.jpg" alt="Denario 2"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Denario</span>
+        <div class="card-name">Denario #2</div>
+        <p class="card-desc">Denario traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$150.000</span><span class="card-price">$80.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="product-card" data-category="denario">
-  <div class="card-img-wrap">
-    <div class="card-image"><img src="https://i.ibb.co/Z1hKJ42p/6183233e-b934-42a0-a6e5-41520394de07.jpg" alt="Denario 3"></div>
-    <div class="card-overlay"></div>
-  </div>
-  <div class="card-body">
-    <span class="card-category">Denario</span>
-    <div class="card-name">Denario #3</div>
-    <p class="card-desc">Denario traído de la Basílica de la Virgen de Guadalupe en México. Pieza de devoción y colección.</p>
-    <div class="card-footer">
-      <div class="card-price-wrap">
-        <span class="card-price-old">$150.000</span>
-        <span class="card-price">$80.000</span>
+    <div class="product-card" data-category="denario">
+      <div class="card-img-wrap">
+        <div class="card-image"><img src="https://i.ibb.co/Z1hKJ42p/6183233e-b934-42a0-a6e5-41520394de07.jpg" alt="Denario 3"></div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Denario</span>
+        <div class="card-name">Denario #3</div>
+        <p class="card-desc">Denario traído de la Basílica de la Virgen de Guadalupe en México.</p>
+        <div class="card-footer"><div class="card-price-wrap"><span class="card-price-old">$150.000</span><span class="card-price">$80.000</span></div></div>
       </div>
     </div>
-  </div>
-</div>
-```
-
   </div>
 </div>
 
@@ -489,24 +366,29 @@ footer { padding: 24px 16px; }
   <h2>¿Querés un<br>rosario <em>auténtico?</em></h2>
   <div class="contact-info">
     <div class="contact-item">
-      <div class="contact-item-icon">✝</div>
+      <div style="width:40px;height:40px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
       <div class="contact-item-text"><strong>WhatsApp</strong>300 429 9895 · 318 408 5484</div>
     </div>
     <div class="contact-item">
-      <div class="contact-item-icon">◈</div>
+      <div style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:28px;line-height:1;">🇲🇽</div>
       <div class="contact-item-text"><strong>Origen</strong>Basílica de la Virgen de Guadalupe · México</div>
     </div>
     <div class="contact-item">
-      <div class="contact-item-icon">✦</div>
+      <div style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:26px;line-height:1;">🚚</div>
       <div class="contact-item-text"><strong>Envíos</strong>Nacional e internacional</div>
     </div>
-    <div class="social-links">
-      <a class="social-link" href="https://www.instagram.com/satillosinternacional?igsh=MXFvNmhpODZuc2g4bw==" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <a class="social-link" href="https://www.tiktok.com/@satillosinternacional?_r=1&_t=ZS-95Qy7nUUTnk" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
-      </a>
+    <div class="social-section">
+      <span class="social-label">Redes Sociales</span>
+      <div class="social-links">
+        <a class="social-link" href="https://www.instagram.com/satillosinternacional?igsh=MXFvNmhpODZuc2g4bw==" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a class="social-link" href="https://www.tiktok.com/@satillosinternacional?_r=1&_t=ZS-95Qy7nUUTnk" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -515,10 +397,10 @@ footer { padding: 24px 16px; }
   <div class="footer-logo"><span>Satillos International</span></div>
   <div class="footer-social">
     <a href="https://www.instagram.com/satillosinternacional?igsh=MXFvNmhpODZuc2g4bw==" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#8A9BBF"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
     </a>
     <a href="https://www.tiktok.com/@satillosinternacional?_r=1&_t=ZS-95Qy7nUUTnk" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#8A9BBF"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
     </a>
   </div>
   <p>© 2026 Satillos International · Todos los derechos reservados</p>
