@@ -37,7 +37,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 
 .basilica-band { background: linear-gradient(135deg, rgba(212,43,43,0.15), rgba(245,197,24,0.08)); border-top: 1px solid rgba(212,43,43,0.25); border-bottom: 1px solid rgba(212,43,43,0.25); padding: 40px; display: flex; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap; }
 .basilica-item { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
-.basilica-icon { font-size: 28px; color: #F5C518; }
+.basilica-icon { font-size: 22px; color: #F5C518; font-family: ‘Cormorant Garamond’, serif; font-weight: 600; }
 .video-section { padding: 60px 40px; text-align: center; background: #111D33; }
 .video-label { font-size: 10px; letter-spacing: 0.5em; text-transform: uppercase; color: #D42B2B; margin-bottom: 16px; display: block; }
 .video-title { font-family: ‘Cormorant Garamond’, serif; font-size: clamp(28px, 4vw, 44px); font-weight: 300; color: #F5F0E8; margin-bottom: 32px; }
@@ -164,8 +164,8 @@ footer { padding: 24px 16px; }
 <div class="basilica-band">
   <div class="basilica-item"><div class="basilica-icon">✝</div><strong>Basílica de Guadalupe</strong><span>Origen certificado · México</span></div>
   <div class="basilica-item"><div class="basilica-icon">✦</div><strong>Baño en Oro 24k</strong><span>Acabado premium garantizado</span></div>
-  <div class="basilica-item"><div class="basilica-icon">◈</div><strong>Envíos a todo el mundo</strong><span>Nacional e internacional</span></div>
-  <div class="basilica-item"><div class="basilica-icon">❋</div><strong>Piezas bendecidas</strong><span>Con valor espiritual único</span></div>
+  <div class="basilica-item"><div class="basilica-icon">✦</div><strong>Envíos a todo el mundo</strong><span>Nacional e internacional</span></div>
+  <div class="basilica-item"><div class="basilica-icon">✦</div><strong>Piezas bendecidas</strong><span>Con valor espiritual único</span></div>
 </div>
 
 <section class="filters-section" id="catalogo">
@@ -368,7 +368,7 @@ footer { padding: 24px 16px; }
   <span class="video-label">Nuestros productos</span>
   <h2 class="video-title">Mirá el detalle de cerca</h2>
   <div class="video-wrap">
-    <video controls playsinline>
+    <video autoplay loop muted playsinline style="width:100%;aspect-ratio:9/16;display:block;background:#000;">
       <source src="https://drive.google.com/uc?export=download&id=1bfcZnYfnlZenz5lVUTNu_xbG_LOVcNDE" type="video/mp4">
     </video>
   </div>
